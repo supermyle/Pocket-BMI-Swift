@@ -1,5 +1,5 @@
 # Pocket-BMI-Swift
-Port of my original Android Application [Pocket-BMI-Calculator](https://play.google.com/store/apps/details?id=com.supermyle.bmicalculator&hl=en) to IOS
+Port of my original Android Application [Pocket BMI Calculator](https://play.google.com/store/apps/details?id=com.supermyle.bmicalculator&hl=en) to IOS
 
 ## App icon
 
