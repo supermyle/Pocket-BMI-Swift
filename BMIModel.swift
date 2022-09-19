@@ -9,15 +9,26 @@
 import Foundation
 
 class BMIModel{
-    var height:Double
-    var weight:Double
+    var pounds:Double
+    var feet:Double
+    var inches:Double
     
-    init (height:Double, weight:Double){
-        self.height=height
-        self.weight=weight
+    init (pounds:Double, feet:Double, inches:Double){
+        self.pounds=pounds
+        self.feet=feet
+        self.inches=inches
     }
     
     func bmi()->Double {
-        return weight/(height*weight)
+        //Weight in pounds converted to kilograms for conversions
+        let kilograms:Double = pounds * 0.45
+        //Convert feet to inches and add inches to get total height in inches
+        let inchesFinal:Double = ((feet * 12) + inches)
+        //Multiply the height in inches by 0.025 (the metric conversion factor)
+        let converted:Double = inchesFinal * 0.025
+        //Square the answer from above
+        let squared:Double = converted * converted
+        //Return BMI by dividing kilograms by squared number
+        return round((kilograms / squared)*100)/100
     }
 }

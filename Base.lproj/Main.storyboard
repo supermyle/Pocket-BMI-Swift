@@ -61,10 +61,19 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="calcBMI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7KT-eN-ve3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chp-Jf-O7R">
                                 <rect key="frame" x="109" y="521" width="196" height="92"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nh-gl-dSo">
+                                <rect key="frame" x="109" y="621" width="196" height="110"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -74,15 +83,19 @@
                             <constraint firstItem="Chp-Jf-O7R" firstAttribute="trailing" secondItem="gus-y4-4KK" secondAttribute="trailing" id="2nQ-Dh-32c"/>
                             <constraint firstItem="hVC-e0-qd1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="7wI-xJ-S1C"/>
                             <constraint firstItem="ui5-Hh-BGk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="Bea-Ks-fOY"/>
+                            <constraint firstItem="5Nh-gl-dSo" firstAttribute="top" secondItem="Chp-Jf-O7R" secondAttribute="bottom" constant="8" id="BvB-sc-YOq"/>
                             <constraint firstItem="FzG-Ja-3TP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="81" id="H9t-03-Lkf"/>
+                            <constraint firstItem="5Nh-gl-dSo" firstAttribute="leading" secondItem="Chp-Jf-O7R" secondAttribute="leading" id="JcJ-uH-hyZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gus-y4-4KK" secondAttribute="trailing" constant="109" id="KlP-hT-7I1"/>
                             <constraint firstItem="ui5-Hh-BGk" firstAttribute="centerX" secondItem="Is2-Hk-8QW" secondAttribute="centerX" id="L0W-HE-WhG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Nh-gl-dSo" secondAttribute="bottom" constant="131" id="MMp-jW-Nfq"/>
                             <constraint firstItem="ui5-Hh-BGk" firstAttribute="centerX" secondItem="FzG-Ja-3TP" secondAttribute="centerX" id="RSR-RF-d99"/>
                             <constraint firstItem="ui5-Hh-BGk" firstAttribute="top" secondItem="FzG-Ja-3TP" secondAttribute="bottom" constant="8" symbolic="YES" id="SGd-h3-nEa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Chp-Jf-O7R" secondAttribute="bottom" constant="249" id="T8c-VT-3rk"/>
                             <constraint firstItem="hVC-e0-qd1" firstAttribute="top" secondItem="0cH-JW-iyu" secondAttribute="bottom" constant="18" id="U3R-Ak-F0X"/>
                             <constraint firstItem="gus-y4-4KK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="aoJ-ke-Fj4"/>
                             <constraint firstItem="Chp-Jf-O7R" firstAttribute="leading" secondItem="gus-y4-4KK" secondAttribute="leading" id="brt-cp-aSG"/>
+                            <constraint firstItem="5Nh-gl-dSo" firstAttribute="trailing" secondItem="Chp-Jf-O7R" secondAttribute="trailing" id="d4V-sb-Fmk"/>
                             <constraint firstItem="0cH-JW-iyu" firstAttribute="top" secondItem="Is2-Hk-8QW" secondAttribute="bottom" constant="8" id="efT-jc-Kh3"/>
                             <constraint firstItem="gus-y4-4KK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="380" id="gmp-4K-lZQ"/>
                             <constraint firstItem="Is2-Hk-8QW" firstAttribute="centerX" secondItem="0cH-JW-iyu" secondAttribute="centerX" id="jDj-nK-pCq"/>
@@ -100,6 +113,7 @@
                     </view>
                     <connections>
                         <outlet property="feetTextField" destination="0cH-JW-iyu" id="7sv-FU-Buk"/>
+                        <outlet property="healthLabel" destination="5Nh-gl-dSo" id="IOA-BC-1pz"/>
                         <outlet property="inchesTextField" destination="hVC-e0-qd1" id="ler-fu-bqh"/>
                         <outlet property="poundsTextField" destination="ui5-Hh-BGk" id="VK0-Hl-BOL"/>
                         <outlet property="resultLabel" destination="Chp-Jf-O7R" id="1IK-Y0-5Bc"/>

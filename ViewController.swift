@@ -14,20 +14,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var feetTextField: UITextField!
     @IBOutlet weak var inchesTextField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var healthLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-    @IBAction func calcBMI(_ sender: UIButton){
-        /*let getPounds = Double(poundsTextField.text!)
-        let getFeet = Double(feetTextField.text!)
-        let getInches = Double(inchesTextField.text!)
+    
+    @IBAction func calcBMI(_ sender: Any) {
+        let pounds = Double(poundsTextField.text!)
+        let feet = Double(feetTextField.text!)
+        let inches = Double(inchesTextField.text!)
+        let bmiM = BMIModel(pounds: pounds!, feet: feet!, inches: inches!)
+        let bmiResult = bmiM.bmi()
         
-        var bmiResult = 0
-        
-        
-        resultLabel.text = "You have a BMI of \(bmiResult)"*/
+        resultLabel.text = String(bmiResult)
+        if(bmiResult < 18.5 || bmiResult > 24.9){
+            healthLabel.textColor = UIColor.red
+        }else {
+            healthLabel.textColor = UIColor.green
+        }
+        healthLabel.text = "The healthy BMI range for adults is 18.5 to 24.9"
     }
 }
